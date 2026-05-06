@@ -2,9 +2,9 @@
   hosts: local
   connection: local
   vars_prompt:
-  - course name: COURSE
+  - name: COURSE
     prompt: Please enter course name
-  - duration: DURATION  
+  - name: DURATION  
     prompt: Please enter duration
   tasks:
   - name: print course name
