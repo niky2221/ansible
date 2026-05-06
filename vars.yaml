@@ -2,8 +2,8 @@
   hosts: local
   connection: local
   vars:
-    COURSE: "ANSIBLE"
-    DURATION: "120 HRS"
+    ALL: "ANSIBLE"
+    WELCOME: "120 HRS"
   tasks:
   - name: play1 and task1
     ansible.builtin.debug:
