@@ -20,7 +20,7 @@
     vars_files:
     - vars.yaml
     ansible.builtin.debug:
-      msg: "hello {{ ALL }}, {{ WELCOME }}
+      msg: "hello {{ ALL }}, {{ WELCOME }}"
 
 
 
