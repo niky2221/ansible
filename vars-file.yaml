@@ -1,25 +1,10 @@
 - name: multi play
   hosts: local
   connection: local
-  vars: # this play variables are print total playbook
-    COURSE: "ANSIBLE"
-    DURATION: "120 HRS"
-  tasks:
-  - name: variable
-    ansible.builtin.debug:
-     msg: "hello {{ COURSE }}, This course duration is {{ DURATION }}"
-
-  - name: print variables
-    vars: # in task variables only print in this task only
-      NEW: "Devops"
-      TIME: "120 Hrs"
-    ansible.builtin.debug:
-      msg: " hello {{ NEW }}, this course duration is {{ TIME }}"
-
+  vars_files:
+    - course.yaml
   tasks:
   - name: variable files
-    vars_files:
-    - course.yaml
     ansible.builtin.debug:
       msg: "hello {{ ALL }}, {{ WELCOME }}"
 
