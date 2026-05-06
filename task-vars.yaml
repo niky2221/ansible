@@ -6,15 +6,15 @@
     DURATION: "120 HRS"
   tasks:
   - name: variable
-    vars: # in task variables only print in this task only
-      COURSE: "Devops"
-      DURATION: "120 Hrs"
     ansible.builtin.debug:
      msg: "hello {{ COURSE }}, This course duration is {{ DURATION }}"
 
   - name: print variables
+    vars: # in task variables only print in this task only
+      NEW: "Devops"
+      TIME: "120 Hrs"
     ansible.builtin.debug:
-      msg: " hello {{ COURSE }}, this course duration is {{ DURATION }}"
+      msg: " hello {{ NEW }}, this course duration is {{ TIME }}"
 
 
 
