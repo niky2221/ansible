@@ -16,6 +16,7 @@
     ansible.builtin.debug:
       msg: " hello {{ NEW }}, this course duration is {{ TIME }}"
 
+  tasks:
   - name: variable files
     vars_files:
     - course.yaml
