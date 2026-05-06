@@ -14,7 +14,7 @@
 
   - name: print variables
     ansible.builtin.debug:
-      msg: " hello {{ NEW }}, this course duration is {{ DURATION }}"
+      msg: " hello {{ COURSE }}, this course duration is {{ DURATION }}"
 
 
 
