@@ -1,7 +1,10 @@
 - name: multi play
   hosts: local
   connection: local
+  vars:
+    COURSE: "ANSIBLE"
+    DURATION: "120 HRS"
   tasks:
   - name: play1 and task1
     ansible.builtin.debug:
-     msg: "hello ansible"
+     msg: "hello {{ COURSE }} , This course duration {{ DURATION }}"
