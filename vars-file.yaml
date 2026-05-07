@@ -1,6 +1,6 @@
 - name: multi play
   hosts: web
-  vars_files:
+  # vars_files:
     - course.yaml
   tasks:
   - name: variable files
