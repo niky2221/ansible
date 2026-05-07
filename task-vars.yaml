@@ -17,8 +17,8 @@
       msg: " hello {{ NEW }}, this course duration is {{ TIME }}"
 
   - name: variable files
-   # vars_files:
-  #  - vars.yaml
+    vars_files:
+     - vars.yaml
     ansible.builtin.debug:
       msg: "hello {{ ALL }}, {{ WELCOME }}"
 
