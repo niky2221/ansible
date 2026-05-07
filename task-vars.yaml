@@ -18,7 +18,7 @@
 
   - name: variable files
     vars_files:
-     - vars.yaml
+     - course.yaml
     ansible.builtin.debug:
       msg: "hello {{ ALL }}, {{ WELCOME }}"
 
