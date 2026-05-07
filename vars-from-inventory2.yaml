@@ -1,5 +1,5 @@
 - name: variable from files
-  hosts: web, local
+  hosts: local
   connection: local
   tasks:
     - name: print the variable
