@@ -13,5 +13,5 @@
     ansible.builtin.apt:
       name: nginx
       state: installed
-    when: ansible_os_family==debian 
+    when: ansible_os_family== "Debian" 
       
