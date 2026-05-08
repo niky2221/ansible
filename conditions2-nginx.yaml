@@ -1,6 +1,5 @@
 - name: install nginx
-  hosts: local
-  connection: local
+  hosts: web
   become: yes
   tasks:
   - name: install nginx if os RHEL
@@ -8,6 +7,11 @@
       name: nginx
       state: present
     when: ansible_os_family == "RedHat"
+  
+  - name: run the service
+    ansible.builtin.service:
+      name: nginx
+      state: started
 
   - name: install nginx if os ubuntu
     ansible.builtin.apt:
