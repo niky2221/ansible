@@ -4,7 +4,7 @@
   become: yes
   tasks:
   - name: install packages
-    ansible.builtin.package:
+    ansible.builtin.dnf:
       name: "{{ item }}"
       state: present  
       enabled: yes 
