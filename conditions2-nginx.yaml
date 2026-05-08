@@ -7,7 +7,7 @@
       name: nginx
       state: installed
       started: yes
-    when: ansible_os_family== "Redhat"
+    when: ansible_os_family== "RedHat"
 
   - name: install nginx if os ubuntu
     ansible.builtin.apt:
