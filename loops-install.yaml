@@ -9,12 +9,3 @@
       state: present  
       enabled: yes 
 
-  - name: start the service
-    ansible.builtin.service:
-      name: "{{ item }}"
-      state: started 
-    loop:
-    - gcc
-    - mysql
-    - git
-    - zip  
