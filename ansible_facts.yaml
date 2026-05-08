@@ -4,3 +4,5 @@
   - name: print the facts
     ansible.builtin.debug:
       msg: "{{ ansible_facts }}"
+
+      # if this module runs in server, showing all json file of ansible and server details, os_family, ram and configuration

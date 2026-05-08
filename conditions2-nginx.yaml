@@ -7,7 +7,8 @@
       name: nginx
       state: present
     when: ansible_os_family == "RedHat"
-  
+   # os family known with ansible fact module,
+   # if os family is redhat then this module executed and installed nginx
   - name: run the service
     ansible.builtin.service:
       name: nginx
@@ -17,5 +18,9 @@
     ansible.builtin.apt:
       name: nginx
       state: installed
-    when: ansible_os_family == "Debian" 
-      
+    when: ansible_os_family == "Debian"   
+                                #ubuntu
+
+    # if os_family was ubuntu then 3rd task will skipped in server
+
+    
