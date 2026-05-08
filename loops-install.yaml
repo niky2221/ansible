@@ -1,0 +1,24 @@
+- name: install files
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: install packages
+    ansible.builtin.package:
+      name: {{ item }}
+      state: present    
+    loop:
+    - gcc
+    - mysql
+    - git
+    - zip  
+
+  - name: start the service
+    ansible.builtin.service:
+      name: {{ item }}
+      state: started
+    loop:
+    - gcc
+    - mysql
+    - git
+    - zip
