@@ -4,8 +4,12 @@
   become: yes
   tasks:
   - name: install packages
-    ansible.builtin.dnf:
+    ansible.builtin.package:
       name: "{{ item }}"
-      state: present  
-      enabled: yes 
-
+      state: present    
+    loop:
+    - gcc
+    - mysql
+    - git
+    - zip  
+    
