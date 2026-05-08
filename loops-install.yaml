@@ -19,6 +19,6 @@
       state: started
     loop:
     - gcc
-    - mysql
+    - mysqld
     - git
     - zip
