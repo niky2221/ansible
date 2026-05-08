@@ -1,11 +1,13 @@
 - name: install nginx
-  hosts: web
+  hosts: local
+  connection: local
   become: yes
   tasks:
   - name: install nginx if os RHEL
     ansible.builtin.dnf:
       name: nginx
       state: removed
+      service: yes
     when: ansible_os_family == "RedHat"
 
   - name: install nginx if os ubuntu
