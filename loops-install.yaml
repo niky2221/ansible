@@ -6,9 +6,10 @@
   - name: install packages
     ansible.builtin.package:
       name: "{{ item }}"
-      state: absent    
-    # loop:
-    # - gcc
-    # - mysql
-    # - git
-    # - zip  
+      state: present    
+    loop:
+    - gcc
+    - mysql
+    - git
+    - zip  
+    
