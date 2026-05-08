@@ -6,19 +6,15 @@
   - name: install packages
     ansible.builtin.package:
       name: "{{ item }}"
-      state: present    
+      state: present  
+      enabled: yes 
+
+  - name: start the service
+    ansible.builtin.service:
+      name: "{{ item }}"
+      state: started 
     loop:
     - gcc
     - mysql
     - git
     - zip  
-
-  - name: start the service
-    ansible.builtin.service:
-      name: "{{ item }}"
-      state: started
-    loop:
-    - gcc
-    - mysqld
-    - git
-    - zip
