@@ -18,6 +18,7 @@
     loop:
     - boto3
     - botocore
+
   - name: create ec2 instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
@@ -26,7 +27,7 @@
       image_id: "{{ ami_id }}"
       instance_type: "{{ instance_type }}"
     loop: "{{ instances }}"
-    resigter: ec2_info
+    register: ec2_info
 
   - name: print ec2_info
     ansible.builtin.debug:
